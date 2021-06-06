@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import ResumeArrays from "./ResumeArrays";
-import FirstLis from './FirstLis';
-import SecondLis from './SecondLis';
-import ThirdLis from './ThirdLis';
 import EmailIcon from "@material-ui/icons/EmailOutlined";
 import PhoneIcon from "@material-ui/icons/PhoneOutlined";
 import UrlIcon from "@material-ui/icons/Language";
@@ -12,9 +8,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 function Resume1(props) {
     return (
-        ResumeArrays.map((resumes, index) => {
-            return (
-                <div className={resumes.class}>
+                <div className="resume1">
 
             <div className="LeftSide">
 
@@ -56,7 +50,7 @@ function Resume1(props) {
                         {props.Data.firstHead}
                     </h2>
                     <ul>
-                        {FirstLis.map((li, index) => {
+                        {props.FirstLis.map((li, index) => {
                             return (
                                 <li>{li.li}</li>
                             )
@@ -65,7 +59,7 @@ function Resume1(props) {
 
                     <h2>{props.Data.secondHead}</h2>
                     <ul>
-                        {SecondLis.map((li, index) => {
+                        {props.SecondLis.map((li, index) => {
                             return (
                                 <li>{li.li}</li>
                             )
@@ -84,7 +78,7 @@ function Resume1(props) {
                     <h2>{props.Data.thirdHeader}</h2>
 
                     <ul>
-                        {ThirdLis.map((li, index) => {
+                        {props.ThirdLis.map((li, index) => {
                             return (
                                 <li>{li.li}</li>
                             )
@@ -94,9 +88,6 @@ function Resume1(props) {
             </div>
         </div>
 
-        
-            )
-        })
     )
 }
 

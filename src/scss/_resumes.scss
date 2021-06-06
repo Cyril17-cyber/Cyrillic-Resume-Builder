@@ -40,8 +40,51 @@
 }
 
 .ResumeLists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+    grid-row-gap: 1.2rem;
+    align-items: center;
     padding: 0px 36px 21px;
+}
+
+.colorpicker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 35px;
     background: $veryLightGray;
+    div {
+        display: block;
+        width: 70px;
+        border-radius: 5px;
+        height: 23px;
+    }
+    .lightPurple {
+        border: 1px solid black;
+        background-color: #737cbf;
+    }
+    .DarkBlue {
+        background-color: rgb(21, 145, 247);
+    }
+    .LimeGreen {
+        background-color: hsl(136, 65%, 51%);;
+    }
+    .Orangeish {
+        background-color: rgb(240, 174, 34);
+    }
+    .Blackish {
+        background-color: rgb(10, 1, 24);
+    }
+    .Pinkish {
+        background-color: rgb(210, 30, 84);
+    }
+    .Purpleish {
+        background-color: rgb(90, 1, 112);
+    }
+    .BrightCyan {
+        background-color: $brightCyan;
+    }
 }
 
 @media (min-width: 992px) {

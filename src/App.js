@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import "./scss/styles.css";
 import Nav from './components/Nav';
 import MobileLinks from './components/MobileLinks';
 import Footer from './components/Footer';
 import Resumes from './components/Resumes';
 import Cards from './components/Cards';
+import Resume1Texts from './components/resumesData/resume1Texts';
 import Home from './components/Home';
 import {BrowserRouter as Router} from "react-router-dom"
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
@@ -34,7 +36,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/resume' exact component={Resumes} />
         <Route path='/card' exact component={Cards} />
-        <Route path='/resume/resume1' exact component={Cards} />
+        <Route path='/resume/edit/resume1' exact component={Resume1Texts} />
         </Switch>
 
         <Footer />

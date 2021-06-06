@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Photo1 from '../images/photo1.jpeg'
 import Texts from "./subComponents/Texts";
 import textArrays from "./Arrays";
-import Resume1 from './resumes/Resume1';
+import Resume1 from './resumesData/Resume1';
 import { Link } from 'react-router-dom';
 
 
@@ -22,36 +23,6 @@ function Resumes() {
         });
     }
 
-    const [ResumeData, setResumeData] = useState({
-        Fname: "Cyril",
-        Lname: "Asogwa",
-        email: "Cyril@asogwa.com",
-        emailLink: "http://",
-        linkedIn: "cyril123456",
-        linkedInLink: "http://",
-        phone: "09012345678",
-        twitter: "@cyril_19",
-        twitterLink: "http://",
-        url: "cyril.com",
-        urlLink: "http://",
-        github: "@cyrilAsogwa99",
-        gitLink: "http://",
-        firstHead: "Skills",
-        secondHead: "Education",
-        summary: "A full-stack web developer making full stack websites",
-        thirdHeader: "Work History"
-    });
-
-    function ResumeCaller(event) {
-        setResumeData((prevValue) => {
-            const {name, value} = event.target;
-            return {
-                ... prevValue,
-                [name]: value
-            }
-        })
-    }
-
     return (
         <div>
             <Texts
@@ -64,11 +35,20 @@ function Resumes() {
          />
 
          <div className="colorpicker">
-             
+             <div className="lightPurple"></div>
+             <div className="DarkBlue"></div>
+             <div className="LimeGreen"></div>
+             <div className="Orangeish"></div>
+             <div className="Blackish"></div>
+             <div className="Pinkish"></div>
+             <div className="Purpleish"></div>
+             <div className="BrightCyan"></div>
          </div>
 
          <div className="ResumeLists">
-         <Resume1 Data={ResumeData} click={ResumeCaller} />
+         <Link to='/resume/edit/resume1'>
+         <img src={Photo1} className="App-logo" alt="logo" />
+         </Link>
          </div>
         </div>
     )

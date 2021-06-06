@@ -1,0 +1,78 @@
+.footer {
+    font-family: 'Montserrat', sans-serif;
+    color: $grayishBlue;
+    display: flex;
+    flex-direction: column;
+    background: $darkBlue;
+    padding: 5px 28px;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
+    .logo {
+        color: $white;
+        display: flex;
+        align-items: center;
+        img {
+            height: 60px;
+        }
+        p {
+            margin-left: 13px;
+            font-family: 'Mate SC', serif;
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+
+    &__links {
+        margin: 14px;
+
+        a {
+            color: $white;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pro {
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        color: $veryLightGray;
+        font-weight: 600;
+        font-size: 18px;    
+        padding: 0.875rem 2.1875rem;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        border-radius: 25px;
+        transition: all 300ms ease-in-out;
+    
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

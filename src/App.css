@@ -13,6 +13,22 @@
   }
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav div {
+  background: white;
+  padding: 5px 10px;
+  margin-right: 30px;
+}
+
+nav div a {
+  text-decoration: none;
+  color: black;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,0 +1,71 @@
+.resume1 {
+    font-family: 'Public Sans', sans-serif;
+    display: flex;
+    h2 {
+        font-weight: 500;
+        margin-top: 0px;
+    }
+
+    .LeftSide {
+        display: flex;
+        flex-direction: column;
+        &__top {
+            background: #737cbf;
+            padding: 25px;
+            height: 15.2rem;
+
+            h1 {
+                margin-top: 0px;
+            }
+            .contacts {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    font-size: 13px;
+                    text-decoration: none;
+                    color: black;
+
+                    &:not(:last-child) {
+                        margin-bottom: 11px;
+                    }
+
+                    .MuiSvgIcon-root {
+                        height: 16px;
+                    }
+
+                    p {
+                        margin: 0px 0px 0px 7px;
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            background: #737cbfb4;
+            padding: 25px;
+            height: 24.8rem;
+        }
+    }
+
+    .RightSide {
+        display: flex;
+        flex-direction: column;
+        &__top {
+            background: #737cbf81;
+            padding: 25px;
+            height: 15.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__bottom {
+            background: $white;
+            padding: 25px;
+            height: 24.8rem;
+        }
+    }
+}

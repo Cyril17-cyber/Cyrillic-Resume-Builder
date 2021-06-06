@@ -1,0 +1,66 @@
+.resumes {
+    padding:0px 35px;
+    font-family: 'Montserrat', sans-serif;
+    background: $veryLightGray;
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 2%;
+        h1 {
+            color: $darkBlue;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+    
+    .filterTab {
+        display: flex;
+        justify-content: space-between;
+
+        .filterTitle {
+            color: $darkBlue;
+            font-weight: 500;
+        }
+
+        .dropDown {
+            &__texts {
+                display: flex;
+                align-items: center;
+            }
+
+            .filter__texts {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.ResumeLists {
+    padding: 0px 36px 21px;
+    background: $veryLightGray;
+}
+
+@media (min-width: 992px) {
+    .resumes {
+        .top {
+            padding: 0px 25%;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .resumes {
+        .top {
+            h1 {
+                font-size: 26px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}

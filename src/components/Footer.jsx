@@ -30,7 +30,7 @@ function Footer() {
             </div></div>
 
             <div className="right">
-            <Link className="pro">GO Pro</Link>
+            <button className="pro">GO Pro</button>
 
             <p>Copyright ©{year.getFullYear()}. All Right Reserved</p>
             </div>

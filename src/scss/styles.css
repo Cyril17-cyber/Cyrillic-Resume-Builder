@@ -107,6 +107,7 @@ nav .nav__links a:hover::before {
 }
 
 nav .pro {
+  cursor: pointer;
   display: none;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
@@ -123,6 +124,10 @@ nav .pro {
 
 nav .pro:hover {
   opacity: 0.6;
+}
+
+nav #hamburger {
+  cursor: pointer;
 }
 
 nav #hamburger > span {
@@ -168,7 +173,7 @@ nav #hamburger > span:not(:last-child) {
   background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
 }
 
-#App.visibleBurger .resumes {
+#App.visibleBurger .resumes, #App.visibleBurger .editor {
   opacity: 0.3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(#f3f4f6));
   background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
@@ -228,6 +233,10 @@ nav #hamburger > span:not(:last-child) {
   }
 }
 
+.pro {
+  border: none;
+}
+
 .main {
   font-family: 'Montserrat', sans-serif;
   background: #fafafa;
@@ -252,6 +261,7 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .main__texts .pro {
+  cursor: pointer;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   color: #fafafa;
@@ -351,16 +361,25 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .ResumeLists {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 5rem;
-  grid-row-gap: 1.2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0px 36px 21px;
+}
+
+.ResumeLists img {
+  height: 67vw;
+}
+
+.ResumeLists a:not(:first-child) {
+  margin-top: 15px;
 }
 
 .colorpicker {
@@ -420,6 +439,18 @@ nav #hamburger > span:not(:last-child) {
   .resumes .top {
     padding: 0px 25%;
   }
+  .ResumeLists {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ResumeLists img {
+    height: 40vw;
+  }
 }
 
 @media (max-width: 320px) {
@@ -458,9 +489,17 @@ nav #hamburger > span:not(:last-child) {
   padding: 25px;
 }
 
-.resume1 .LeftSide__top h1 {
-  margin-top: 0px;
+.resume1 .LeftSide__top .top {
+  margin: 0px 0px 10px;
   border-bottom: 1.5px solid #2d314d;
+}
+
+.resume1 .LeftSide__top .top h1 {
+  margin: 0px;
+}
+
+.resume1 .LeftSide__top .top p {
+  margin: 5px 0px 3px;
 }
 
 .resume1 .LeftSide__top .contacts {
@@ -473,28 +512,23 @@ nav #hamburger > span:not(:last-child) {
           flex-direction: column;
 }
 
-.resume1 .LeftSide__top .contacts a {
+.resume1 .LeftSide__top .contacts .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
+}
+
+.resume1 .LeftSide__top .contacts .links p {
+  margin: 0;
   text-decoration: none;
   color: black;
 }
 
-.resume1 .LeftSide__top .contacts a:not(:last-child) {
+.resume1 .LeftSide__top .contacts .links:not(:last-child) {
   margin-bottom: 11px;
-}
-
-.resume1 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume1 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
 }
 
 .resume1 .LeftSide__bottom {
@@ -537,679 +571,179 @@ nav #hamburger > span:not(:last-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .resume2 h2 {
-  font-weight: 500;
-  margin-top: 0px;
+  border-bottom: 1px solid #9698a6;
 }
 
 .resume2 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume2 .LeftSide__top {
-  background: #737cbf;
   padding: 25px;
+  background: #c57001;
 }
 
-.resume2 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
+.resume2 .LeftSide .top {
+  border-bottom: 1px solid #9698a6;
 }
 
-.resume2 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.resume2 .LeftSide .top h1 {
+  margin: 0px;
 }
 
-.resume2 .LeftSide__top .contacts a {
+.resume2 .LeftSide .top p {
+  margin: 7px 0px 0px;
+}
+
+.resume2 .LeftSide .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
 }
 
-.resume2 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume2 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume2 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume2 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
+.resume2 .LeftSide .links p {
+  margin-left: 10px;
 }
 
 .resume2 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume2 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume2 .RightSide__bottom {
-  background: white;
   padding: 25px;
 }
 
 .resume3 {
   font-family: 'Roboto', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.resume3 h2 {
-  font-weight: 500;
-  margin-top: 0px;
-}
-
-.resume3 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume3 .LeftSide__top {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume3 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
-}
-
-.resume3 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume3 .LeftSide__top .contacts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
-}
-
-.resume3 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume3 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume3 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume3 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume3 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume3 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume3 .RightSide__bottom {
-  background: white;
-  padding: 25px;
 }
 
 .resume4 {
   font-family: 'Poppins', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.resume4 h2 {
-  font-weight: 500;
-  margin-top: 0px;
-}
-
-.resume4 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume4 .LeftSide__top {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume4 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
-}
-
-.resume4 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume4 .LeftSide__top .contacts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
-}
-
-.resume4 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume4 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume4 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume4 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume4 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume4 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume4 .RightSide__bottom {
-  background: white;
-  padding: 25px;
 }
 
 .resume5 {
   font-family: 'Raleway', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.resume5 h2 {
-  font-weight: 500;
-  margin-top: 0px;
-}
-
-.resume5 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume5 .LeftSide__top {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume5 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
-}
-
-.resume5 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume5 .LeftSide__top .contacts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
-}
-
-.resume5 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume5 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume5 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume5 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume5 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume5 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume5 .RightSide__bottom {
-  background: white;
-  padding: 25px;
 }
 
 .resume6 {
   font-family: 'Roboto Slab', serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.resume6 h2 {
-  font-weight: 500;
-  margin-top: 0px;
-}
-
-.resume6 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume6 .LeftSide__top {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume6 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
-}
-
-.resume6 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume6 .LeftSide__top .contacts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
-}
-
-.resume6 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume6 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume6 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume6 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume6 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume6 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume6 .RightSide__bottom {
-  background: white;
-  padding: 25px;
 }
 
 .resume7 {
   font-family: 'Playfair Display', serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.resume7 h2 {
-  font-weight: 500;
-  margin-top: 0px;
-}
-
-.resume7 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume7 .LeftSide__top {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume7 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
-}
-
-.resume7 .LeftSide__top .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume7 .LeftSide__top .contacts a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
-}
-
-.resume7 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
-}
-
-.resume7 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume7 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume7 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume7 .RightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.resume7 .RightSide__top {
-  background: white;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.resume7 .RightSide__bottom {
-  background: white;
-  padding: 25px;
 }
 
 .resume8 {
   font-family: 'Quicksand', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-.resume8 h2 {
+.editor {
+  font-family: 'Montserrat', sans-serif;
+  padding: 35px 28px;
+}
+
+.editor .hint {
+  margin-bottom: 43px;
+}
+
+.editor .hint h2, .editor .hint h3, .editor .hint em {
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+.editor .hint h2 {
   font-weight: 500;
-  margin-top: 0px;
+  color: #737cbf;
 }
 
-.resume8 .LeftSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.resumeEditor {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 2rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.resume8 .LeftSide__top {
+.resumeEditor .inputDiv .newInput {
+  margin-top: 24px;
+}
+
+.resumeEditor .inputDiv button {
   background: #737cbf;
-  padding: 25px;
+  margin-right: 10px;
+  border: none;
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  outline: none;
 }
 
-.resume8 .LeftSide__top h1 {
-  margin-top: 0px;
-  border-bottom: 1.5px solid #2d314d;
+.resumeEditor .inputDiv button:hover {
+  color: white;
 }
 
-.resume8 .LeftSide__top .contacts {
+.resumeEditor .inputDiv .FS {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.resume8 .LeftSide__top .contacts a {
+.resumeEditor .inputDiv .label {
+  font-weight: 500;
+  margin: 0px 0px 3px 0px;
+}
+
+.resumeEditor .inputDiv input, .resumeEditor .inputDiv textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 2px;
+  outline: none;
+  border: 0.5px solid #9698a6;
+}
+
+.resumeEditor .inputDiv input:focus, .resumeEditor .inputDiv textarea:focus {
+  border: 0.5px solid #2d314d;
+}
+
+.resumeEditor .inputDiv input {
+  height: 2rem;
+  width: 21vw;
+}
+
+.resumeEditor .inputDiv textarea {
+  height: 6rem;
+  width: 44vw;
+}
+
+.resumeEditor .inputDiv .names {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
-  text-decoration: none;
-  color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.resume8 .LeftSide__top .contacts a:not(:last-child) {
-  margin-bottom: 11px;
+.resumeEditor .inputDiv .Linkform .Linkinput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.resume8 .LeftSide__top .contacts a .MuiSvgIcon-root {
-  height: 16px;
-}
-
-.resume8 .LeftSide__top .contacts a p {
-  margin: 0px 0px 0px 7px;
-}
-
-.resume8 .LeftSide__bottom {
-  background: #737cbf;
-  padding: 25px;
-}
-
-.resume8 .RightSide {
+.resumeEditor .inputDiv .Linkform .Linkinput .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1217,11 +751,24 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.resume8 .RightSide__top {
-  background: white;
-  padding: 25px;
+.resumeEditor .inputDiv .options {
+  margin-top: 4px;
+}
+
+.resumeEditor .inputDiv .options p {
+  margin: 0px;
+}
+
+.resumeEditor .inputDiv .options p:not(:first-child) {
+  margin-top: 11px;
+}
+
+.resumeEditor .resumeContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,14 +776,61 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.resume8 .RightSide__bottom {
-  background: white;
-  padding: 25px;
+.resumeEditor .pro {
+  margin-top: 50px;
+}
+
+.resumeEditor .resume .resume1 {
+  font-size: 1vw;
+}
+
+.resumeEditor .resume .links p {
+  font-size: 1vw;
+}
+
+.resumeEditor .resume .links .MuiSvgIcon-root {
+  height: 2vw;
+}
+
+@media (max-width: 993px) {
+  .resumeEditor {
+    display: block;
+  }
+  .resumeEditor .inputDiv {
+    margin-bottom: 3rem;
+  }
+  .resumeEditor .inputDiv input {
+    width: 39vw;
+  }
+  .resumeEditor .inputDiv textarea {
+    width: 83vw;
+  }
+  .resumeEditor .resume .resume1 {
+    font-size: 3vw;
+  }
+  .resumeEditor .resume .links p {
+    font-size: 3vw;
+  }
+  .resumeEditor .resume .links .MuiSvgIcon-root {
+    height: 5vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .editor {
+    font-size: 78%;
+  }
+  .editor .resumeEditor .inputDiv input {
+    font-size: 100%;
+  }
 }
 
 .footer {
@@ -1325,7 +919,8 @@ nav #hamburger > span:not(:last-child) {
           align-items: center;
 }
 
-.footer .pro {
+.pro {
+  cursor: pointer;
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   color: #fafafa;
@@ -1339,7 +934,7 @@ nav #hamburger > span:not(:last-child) {
   transition: all 300ms ease-in-out;
 }
 
-.footer .pro:hover {
+.pro:hover {
   opacity: 0.6;
 }
 

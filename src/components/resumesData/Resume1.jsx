@@ -1,47 +1,37 @@
-import React, { useState } from 'react';
-import EmailIcon from "@material-ui/icons/EmailOutlined";
-import PhoneIcon from "@material-ui/icons/PhoneOutlined";
-import UrlIcon from "@material-ui/icons/Language";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import React from 'react';
+
 
 function Resume1(props) {
+    
     return (
                 <div className="resume1">
 
             <div className="LeftSide">
 
                 <div className="LeftSide__top">
-                    
+                    <div className="top">
                     <h1 className="name">
                         {props.Data.Fname} {props.Data.Lname}
                     </h1>
+                    <p className="profession">
+                        {props.Data.profession}
+                    </p>
+                    </div>
                     <div className="contacts">
-                        <a href={props.Data.emailLink}>
-                            <EmailIcon />
-                            <p>{props.Data.email}</p>
-                        </a>
-                        <a href={props.Data.linkedInLink}>
-                            <LinkedInIcon />
-                            <p>{props.Data.linkedIn}</p>
-                        </a>
-                        <a href="http://">
-                            <PhoneIcon />
-                            <p>{props.Data.phone}</p>
-                        </a>
-                        <a href={props.Data.twitterLink}>
-                        <TwitterIcon />
-                            <p>{props.Data.twitter}</p>
-                        </a>
-                        <a href={props.Data.urlLink}>
-                            <UrlIcon />
-                            <p>{props.Data.url}</p>
-                        </a>
-                        <a href="http://">
-                            <GitHubIcon />
-                            <p>{props.Data.github}</p>
-                        </a>
+                        
+                        {props.links.map((links, id) => {
+                            function handleClick() {
+                                props.deleteLink(id)
+                            }
+                            return (
+                                <div className="links" key={id} onClick={handleClick}>
+                                    {links.icon}
+                                <p>
+                                    {links.link}
+                                </p>
+                            </div>
+                            )
+                        })}
                     </div>
                 </div>
 
@@ -50,18 +40,24 @@ function Resume1(props) {
                         {props.Data.firstHead}
                     </h2>
                     <ul>
-                        {props.FirstLis.map((li, index) => {
+                        {props.FirstLis.map((li, id) => {
+                            function handleClick() {
+                                props.deleteFirstLi(id)
+                            }
                             return (
-                                <li>{li.li}</li>
+                                <li onClick={handleClick} key={id}>{li.li}</li>
                             )
                         })}
                     </ul>
 
                     <h2>{props.Data.secondHead}</h2>
                     <ul>
-                        {props.SecondLis.map((li, index) => {
+                        {props.SecondLis.map((li, id) => {
+                            function handleClick() {
+                                props.deleteSecondLi(id)
+                            }
                             return (
-                                <li>{li.li}</li>
+                                <li onClick={handleClick} key={id}>{li.li}</li>
                             )
                         })}
                     </ul>
@@ -75,12 +71,15 @@ function Resume1(props) {
                     <p>{props.Data.summary}</p>
                 </div>
                 <div className="RightSide__bottom">
-                    <h2>{props.Data.thirdHeader}</h2>
+                    <h2>{props.Data.thirdHead}</h2>
 
                     <ul>
-                        {props.ThirdLis.map((li, index) => {
+                        {props.ThirdLis.map((li, id) => {
+                            function handleClick() {
+                                props.deleteThirdLi(id)
+                            }
                             return (
-                                <li>{li.li}</li>
+                                <li onClick={handleClick} key={id}>{li.li}</li>
                             )
                         })}
                     </ul>

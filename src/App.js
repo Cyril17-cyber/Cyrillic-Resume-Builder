@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Resumes from './components/Resumes';
 import Cards from './components/Cards';
 import Resume1Texts from './components/resumesData/resume1Texts';
+import Resume2Texts from './components/resumesData/resume2Texts';
 import Home from './components/Home';
 import {BrowserRouter as Router} from "react-router-dom"
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
@@ -37,6 +38,7 @@ function App() {
         <Route path='/resume' exact component={Resumes} />
         <Route path='/card' exact component={Cards} />
         <Route path='/resume/edit/resume1' exact component={Resume1Texts} />
+        <Route path='/resume/edit/resume2' exact component={Resume2Texts} />
         </Switch>
 
         <Footer />

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Photo1 from '../images/photo1.jpeg'
+import Photo1 from '../images/photo1.jpeg';
+import Photo2 from '../images/photo3.jpeg';
 import Texts from "./subComponents/Texts";
 import textArrays from "./Arrays";
-import Resume1 from './resumesData/Resume1';
 import { Link } from 'react-router-dom';
 
 
@@ -48,6 +48,9 @@ function Resumes() {
          <div className="ResumeLists">
          <Link to='/resume/edit/resume1'>
          <img src={Photo1} className="App-logo" alt="logo" />
+         </Link>
+         <Link to='/resume/edit/resume2'>
+         <img src={Photo2} className="App-logo" alt="logo" />
          </Link>
          </div>
         </div>

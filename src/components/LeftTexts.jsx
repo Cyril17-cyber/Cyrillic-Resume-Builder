@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function LeftTexts(props) {
     return (
@@ -13,7 +12,7 @@ function LeftTexts(props) {
 
                 <p>{props.content}</p>
 
-                {props.link && <Link className="pro">Go Pro</Link>}
+                {props.link && <button className="pro">Go Pro</button>}
             </div>
         </div>
     );

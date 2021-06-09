@@ -13,31 +13,32 @@
             background: #737cbf;
             padding: 25px;
 
-            h1 {
-                margin-top: 0px;
+            .top {
+                margin: 0px 0px 10px;
                 border-bottom: 1.5px solid $darkBlue;
+                h1{
+                    margin: 0px;
+                }
+                p {
+                    margin: 5px 0px 3px;
+                }
             }
             .contacts {
                 display: flex;
                 flex-direction: column;
 
-                a {
+                .links {
                     display: flex;
                     align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
+
+                    p {
+                        margin: 0;
+                        text-decoration: none;
+                        color: black;
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
                     }
                 }
             }
@@ -70,482 +71,55 @@
 .resume2 {
     font-family: 'Baloo Tammudu 2', cursive;
     display: flex;
+    align-items: flex-start;
     h2 {
-        font-weight: 500;
-        margin-top: 0px;
+        border-bottom: 1px solid $grayishBlue;
     }
-
     .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
+        padding: 25px;
+        background: #c57001;
+        .top {
+            border-bottom: 1px solid $grayishBlue;
             h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
+                margin: 0px
             }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
+            p{
+                margin: 7px 0px 0px
             }
         }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
+        .links {
+            display: flex;
+            align-items: center;
+            p {
+                margin-left: 10px;
+            }
         }
     }
-
     .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
+        padding: 25px;
     }
 }
 
 .resume3 {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }
 
 .resume4 {
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }
 
 .resume5 {
     font-family: 'Raleway', sans-serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }
 
 .resume6 {
     font-family: 'Roboto Slab', serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }
 
 .resume7 {
     font-family: 'Playfair Display', serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }
 
 .resume8 {
     font-family: 'Quicksand', sans-serif;
-    display: flex;
-    h2 {
-        font-weight: 500;
-        margin-top: 0px;
-    }
-
-    .LeftSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: #737cbf;
-            padding: 25px;
-
-            h1 {
-                margin-top: 0px;
-                border-bottom: 1.5px solid $darkBlue;
-            }
-            .contacts {
-                display: flex;
-                flex-direction: column;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    font-size: 13px;
-                    text-decoration: none;
-                    color: black;
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
-                    }
-
-                    .MuiSvgIcon-root {
-                        height: 16px;
-                    }
-
-                    p {
-                        margin: 0px 0px 0px 7px;
-                    }
-                }
-            }
-        }
-
-        &__bottom {
-            background: #737cbf;
-            padding: 25px;
-        }
-    }
-
-    .RightSide {
-        display: flex;
-        flex-direction: column;
-        &__top {
-            background: $white;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        &__bottom {
-            background: $white;
-            padding: 25px;
-        }
-    }
 }

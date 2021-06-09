@@ -40,12 +40,18 @@
 }
 
 .ResumeLists {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5rem;
-    grid-row-gap: 1.2rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0px 36px 21px;
+    img {
+        height: 67vw;
+    }
+    a {
+        &:not(:first-child){
+            margin-top: 15px;
+        }
+    }
 }
 
 .colorpicker {
@@ -91,6 +97,13 @@
     .resumes {
         .top {
             padding: 0px 25%;
+        }
+    }
+    .ResumeLists{
+        flex-direction: row;
+        align-items: center;
+        img {
+            height: 40vw;
         }
     }
 }

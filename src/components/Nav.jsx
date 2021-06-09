@@ -15,10 +15,10 @@ function Nav(props) {
                 <Link to='/'>Home</Link>
                 <Link to='/resume'>Resumes</Link>
                 <Link to='/card'>Cards</Link>
-                <Link to='/about'>About</Link>
+                <Link to='javas'>About</Link>
             </div>
 
-            <Link className="pro">Go Pro</Link>
+            <button className="pro">Go Pro</button>
 
             <div id="hamburger" onClick={props.menuFunction}>
                 <span></span>

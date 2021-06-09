@@ -75,6 +75,7 @@ nav {
     }
 
     .pro {
+        cursor: pointer;
         display: none;
         font-family: 'Nunito', sans-serif;
         text-decoration: none;
@@ -92,6 +93,7 @@ nav {
     }
 
     #hamburger {
+        cursor: pointer;
         > span {
             display: block;
             width: 26px;
@@ -132,7 +134,7 @@ nav {
             }
         }
 
-        .resumes {
+        .resumes, .editor {
             opacity: 0.3;
             background-image: linear-gradient(to bottom, $darkBlue, $lightGrayishBlue);
         }
@@ -184,4 +186,7 @@ nav {
     .mobileLinks {
         display: none;
     }
+}
+.pro {
+    border: none;
 }

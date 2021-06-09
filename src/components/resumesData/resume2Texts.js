@@ -5,11 +5,10 @@ import UrlIcon from "@material-ui/icons/Language";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Resume1 from './Resume1';
+import Resume2 from './Resume2';
 import Input from './resumeComponents/Input'
-import { Button } from '@material-ui/core';
 
-function Resume1Texts() {
+function Resume2Texts() {
 
     //Resume data
     const [ResumeData, setResumeData] = useState({
@@ -241,7 +240,7 @@ function Resume1Texts() {
              />
             <div className="resumeContent">
             <div className="resume">
-            <Resume1
+            <Resume2
             links={links}
              Data={ResumeData}
             FirstLis={FirstLis}
@@ -262,4 +261,4 @@ function Resume1Texts() {
     )
 }
 
-export default Resume1Texts;
+export default Resume2Texts;

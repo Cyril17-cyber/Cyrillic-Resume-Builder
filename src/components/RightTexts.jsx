@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function RightTexts(props) {
     return (
@@ -11,7 +10,7 @@ function RightTexts(props) {
 
                 <p>{props.content}</p>
 
-                {props.link && <Link className="pro">Go Pro</Link>}
+                {props.link && <button className="pro">Go Pro</button>}
             </div>
             <img src={props.image} alt="svg illustration" srcSet=""/>
         </div>

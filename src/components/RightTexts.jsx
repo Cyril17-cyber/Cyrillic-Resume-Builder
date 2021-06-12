@@ -10,7 +10,7 @@ function RightTexts(props) {
 
                 <p>{props.content}</p>
 
-                {props.link && <button className="pro">Go Pro</button>}
+                {props.link && <button className="pro" onClick={props.proAlert}>Go Pro</button>}
             </div>
             <img src={props.image} alt="svg illustration" srcSet=""/>
         </div>

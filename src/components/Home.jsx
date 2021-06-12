@@ -7,12 +7,13 @@ import RightTexts from "./RightTexts";
 import LeftTexts from "./LeftTexts";
 
 function Home(props) {
-    var statement;
+    var statement = false;
     return (
         <div className="home">
             <RightTexts
              head="Next generation Resumes/Cards editor"
              content="Take little to no stress at all in designing resumes and card rated high quality by professionls. Create stylish beautiful resumes and cards on the fly."
+             proAlert={props.proAlert}
              image={FirstSvg}
              link={statement = true}
              />

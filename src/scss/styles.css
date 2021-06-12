@@ -145,6 +145,30 @@ nav #hamburger > span:not(:last-child) {
   margin-bottom: 5px;
 }
 
+.proAlert {
+  z-index: 2;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  color: #404040;
+  padding: 6% 3%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #App h1 {
   font-weight: 500;
 }
@@ -174,6 +198,28 @@ nav #hamburger > span:not(:last-child) {
 }
 
 #App.visibleBurger .resumes, #App.visibleBurger .editor {
+  opacity: 0.3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(#f3f4f6));
+  background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
+}
+
+#App-header.Alert .home {
+  position: relative;
+}
+
+#App-header.Alert .home .main {
+  opacity: 0.3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(#f3f4f6));
+  background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
+}
+
+#App-header.Alert .resumes, #App-header.Alert .editor {
+  opacity: 0.3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(#f3f4f6));
+  background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
+}
+
+#App-header.Alert .printResume {
   opacity: 0.3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(#f3f4f6));
   background-image: linear-gradient(to bottom, #2d314d, #f3f4f6);
@@ -376,6 +422,7 @@ nav #hamburger > span:not(:last-child) {
 
 .ResumeLists img {
   height: 67vw;
+  width: 73vw;
 }
 
 .ResumeLists a:not(:first-child) {
@@ -435,21 +482,24 @@ nav #hamburger > span:not(:last-child) {
   background-color: #2bb7da;
 }
 
+.prolinks .MuiSvgIcon-root {
+  position: absolute;
+  color: black;
+}
+
 @media (min-width: 992px) {
   .resumes .top {
     padding: 0px 25%;
   }
   .ResumeLists {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .ResumeLists img {
     height: 40vw;
+    width: 40vw;
   }
 }
 
@@ -467,6 +517,10 @@ nav #hamburger > span:not(:last-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.resume1 .MuiSvgIcon-root {
+  margin-right: 2rem;
 }
 
 .resume1 h2 {
@@ -615,11 +669,106 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .resume3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: white;
+}
+
+.Resumetop {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Resumetop .content {
+  background: #2bb7da;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 40px;
+  margin: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Resumetop .content h1 {
+  margin: 0px;
+}
+
+.Resumetop .content p {
+  margin: 13px 0px 0px;
+}
+
+.Resumebottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.Resumebottom .leftSide {
+  background: #2bb7da;
+}
+
+.Resumebottom .leftSide h3 {
+  border: 1px solid #ffffff;
+  padding: 6px 18px;
+}
+
+.Resumebottom .leftSide p, .Resumebottom .leftSide li {
+  padding: 0px 18px;
+}
+
+.Resumebottom .leftSide .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Resumebottom .leftSide .links .MuiSvgIcon-root {
+  margin: 0px 10px 0px 18px;
+}
+
+.Resumebottom .leftSide .links p {
+  padding: 0px 18px 0px 0px;
+}
+
+.Resumebottom .rightSide {
+  color: #000000;
+  padding: 7px 18px;
 }
 
 .resume4 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.resume4 .Resumetop {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");
+}
+
+.resume4 .content, .resume4 .leftSide {
+  background: #31d35c;
 }
 
 .resume5 {
@@ -641,6 +790,21 @@ nav #hamburger > span:not(:last-child) {
 .editor {
   font-family: 'Montserrat', sans-serif;
   padding: 35px 28px;
+}
+
+.editor button {
+  background: #737cbf;
+  margin-right: 10px;
+  border: none;
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  outline: none;
+}
+
+.editor button:hover {
+  color: white;
+  background: #737cbf;
 }
 
 .editor .hint {
@@ -672,24 +836,13 @@ nav #hamburger > span:not(:last-child) {
   margin-top: 24px;
 }
 
-.resumeEditor .inputDiv button {
-  background: #737cbf;
-  margin-right: 10px;
-  border: none;
-  width: 41px;
-  height: 41px;
-  cursor: pointer;
-  outline: none;
-}
-
-.resumeEditor .inputDiv button:hover {
-  color: white;
-}
-
 .resumeEditor .inputDiv .FS {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -784,7 +937,7 @@ nav #hamburger > span:not(:last-child) {
           justify-content: center;
 }
 
-.resumeEditor .pro {
+.resumeEditor button {
   margin-top: 50px;
 }
 
@@ -800,27 +953,52 @@ nav #hamburger > span:not(:last-child) {
   height: 2vw;
 }
 
-@media (max-width: 993px) {
-  .resumeEditor {
-    display: block;
+.printResume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 430px) {
+  .printResume .resume1 {
+    font-size: 50%;
   }
-  .resumeEditor .inputDiv {
-    margin-bottom: 3rem;
+  .printResume .resume1 .MuiSvgIcon-root {
+    margin-right: 7px;
+    width: 5vw;
   }
-  .resumeEditor .inputDiv input {
-    width: 39vw;
+}
+
+.printResume .resume2 h1 {
+  height: 4vh;
+}
+
+.printResume .resume2 p {
+  height: 31px;
+}
+
+.printResume .resume2 .links p {
+  height: 21px;
+}
+
+@media (max-width: 430px) {
+  .printResume .resume2 {
+    font-size: 50%;
   }
-  .resumeEditor .inputDiv textarea {
-    width: 83vw;
-  }
-  .resumeEditor .resume .resume1 {
-    font-size: 3vw;
-  }
-  .resumeEditor .resume .links p {
-    font-size: 3vw;
-  }
-  .resumeEditor .resume .links .MuiSvgIcon-root {
-    height: 5vw;
+}
+
+@media (min-height: 980px) {
+  .footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
   }
 }
 

@@ -1,4 +1,17 @@
 .editor {
+    button {
+        background: #737cbf;
+        margin-right: 10px;
+        border: none;
+        width: 41px;
+        height: 41px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            color: $white;
+            background: #737cbf;
+        }
+    }
     font-family: 'Montserrat', sans-serif;
     padding: 35px 28px;
     .hint {
@@ -23,20 +36,9 @@
         .newInput {
             margin-top: 24px;
         }
-        button {
-            background: #737cbf;
-            margin-right: 10px;
-            border: none;
-            width: 41px;
-            height: 41px;
-            cursor: pointer;
-            outline: none;
-            &:hover {
-                color: $white;
-            }
-        }
         .FS {
             display: flex;
+            align-items: flex-start;
             justify-content: space-between;
         }
         .label {
@@ -97,7 +99,7 @@
         align-items: center;
         justify-content: center;
     }
-    .pro {
+    button {
         margin-top: 50px;
     }
     .resume {
@@ -115,31 +117,34 @@
     }
 }
 
-@media(max-width: 993px) {
-    .resumeEditor {
-        display: block;
-        .inputDiv{
-            margin-bottom: 3rem;
-            input {
-                width: 39vw;
-            }
-            textarea{
-                width: 83vw;
-            }
+.printResume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .resume1 { 
+        @media(max-width: 430px) {
+        font-size: 50%;
+        .MuiSvgIcon-root {
+            margin-right: 7px;
+            width: 5vw
         }
-        .resume {
-            .resume1 {
-                font-size: 3vw;
-            }
-            .links{
-                p {
-                    font-size: 3vw;
-                }
-                .MuiSvgIcon-root {
-                    height: 5vw;
-                }
-            }
+    } 
+}
+    .resume2 {
+        h1 { height: 4vh; } 
+        p { height: 31px; }
+        .links{ p{height: 21px; } }
+        @media(max-width: 430px) {
+            font-size: 50%;
         }
+    }
+}
+
+@media(min-height: 980px) {
+    .footer {
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
     }
 }
 

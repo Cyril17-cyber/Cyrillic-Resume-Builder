@@ -109,6 +109,22 @@ nav {
     }
 }
 
+.proAlert {
+    z-index: 2;
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    color: #404040;
+    padding: 6% 3%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #App {
     h1 {
         font-weight: 500;
@@ -135,6 +151,27 @@ nav {
         }
 
         .resumes, .editor {
+            opacity: 0.3;
+            background-image: linear-gradient(to bottom, $darkBlue, $lightGrayishBlue);
+        }
+    }
+}
+
+#App-header {
+    &.Alert {
+        .home {
+            position: relative;
+            .main {
+                opacity: 0.3;
+                background-image: linear-gradient(to bottom, $darkBlue, $lightGrayishBlue);
+            }
+        }
+
+        .resumes, .editor {
+            opacity: 0.3;
+            background-image: linear-gradient(to bottom, $darkBlue, $lightGrayishBlue);
+        }
+        .printResume {
             opacity: 0.3;
             background-image: linear-gradient(to bottom, $darkBlue, $lightGrayishBlue);
         }

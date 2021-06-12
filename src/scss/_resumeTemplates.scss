@@ -1,6 +1,9 @@
 .resume1 {
     font-family: 'Public Sans', sans-serif;
     display: flex;
+    .MuiSvgIcon-root {
+        margin-right: 2rem;
+    }
     h2 {
         font-weight: 500;
         margin-top: 0px;
@@ -101,11 +104,64 @@
 }
 
 .resume3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: $white;
+    background: $white;
+}
+.Resumetop {
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .content {
+        background: $brightCyan;
+        display: flex;
+        padding: 18px 40px;
+        margin: 24px;
+        flex-direction: column;
+        align-items: center;
+        h1 {margin: 0px}
+        p {margin: 13px 0px 0px;}
+    }
+}
+.Resumebottom {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    .leftSide {
+        background: $brightCyan;
+        h3 {
+            border: 1px solid #ffffff;
+            padding: 6px 18px;
+        }
+        p, li {
+            padding: 0px 18px;
+        }
+        .links {
+            display: flex;
+            align-items: center;
+            .MuiSvgIcon-root {
+                margin: 0px 10px 0px 18px;
+            }
+            p {
+                padding: 0px 18px 0px 0px;
+            }
+        }
+    }
+    .rightSide {
+        color: #000000;
+        padding: 7px 18px;
+    }
 }
 
 .resume4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    .Resumetop{background-color: #000000;
+        background-image: url("https://www.transparenttextures.com/patterns/black-mamba.png");}
+    .content, .leftSide {
+        background: $limeGreen;
+    }
 }
 
 .resume5 {

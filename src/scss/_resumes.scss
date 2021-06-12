@@ -46,6 +46,7 @@
     padding: 0px 36px 21px;
     img {
         height: 67vw;
+        width: 73vw;
     }
     a {
         &:not(:first-child){
@@ -93,6 +94,13 @@
     }
 }
 
+.prolinks {
+    .MuiSvgIcon-root {
+        position: absolute;
+        color: black;
+    }
+}
+
 @media (min-width: 992px) {
     .resumes {
         .top {
@@ -100,10 +108,11 @@
         }
     }
     .ResumeLists{
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         img {
             height: 40vw;
+            width: 40vw;
         }
     }
 }

@@ -249,6 +249,14 @@ function deleteThirdLi(id) {
   })
 }
 
+// footer about styles
+const [about, setAbout] = useState(false);
+function makeTrue() {
+  setAbout(true)
+}
+function makeFalse() {
+  setAbout(false);
+}
   return (
     <Router>
     <div id="App" className={!mobileMenu? "" : "visibleBurger"}>
@@ -256,6 +264,8 @@ function deleteThirdLi(id) {
         <Nav
          menuFunction={menuSetter}
          proAlert={callProAlert}
+         makeTrue={makeTrue}
+         makeFalse={makeFalse}
          />
          {proAlert && <ProAlert alert={callProAlert} />}
 
@@ -434,16 +444,13 @@ function deleteThirdLi(id) {
             deleteThirdLi={deleteThirdLi}
             deleteLink={deletelink} 
             />
-          </Route> 
-          <Route path='/my-resume'>
-            <MyResume />
           </Route>
           <Route path='/about'>
           <About />
           </Route>
         </Switch>
 
-        <Footer proAlert={callProAlert}/>
+        <Footer proAlert={callProAlert} about={about}/>
       </div>
     </div>
     </Router>

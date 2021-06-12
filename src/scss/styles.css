@@ -5,10 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300;400;500;600&display=swap");
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -771,22 +767,6 @@ nav #hamburger > span:not(:last-child) {
   background: #31d35c;
 }
 
-.resume5 {
-  font-family: 'Raleway', sans-serif;
-}
-
-.resume6 {
-  font-family: 'Roboto Slab', serif;
-}
-
-.resume7 {
-  font-family: 'Playfair Display', serif;
-}
-
-.resume8 {
-  font-family: 'Quicksand', sans-serif;
-}
-
 .editor {
   font-family: 'Montserrat', sans-serif;
   padding: 35px 28px;
@@ -1008,6 +988,38 @@ nav #hamburger > span:not(:last-child) {
   }
   .editor .resumeEditor .inputDiv input {
     font-size: 100%;
+  }
+}
+
+.about {
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about a {
+  color: #31d35c;
+  text-decoration: none;
+}
+
+.about .homeLink {
+  font-family: 'Mate SC', serif;
+}
+
+@media (min-height: 710px) {
+  .bottom {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
   }
 }
 

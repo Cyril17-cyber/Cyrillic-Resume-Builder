@@ -10,6 +10,7 @@
 
 # production
 /build
+extra
 
 # misc
 .DS_Store
@@ -23,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #Large Scss files
-# .scss
+ .scss

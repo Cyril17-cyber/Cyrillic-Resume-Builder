@@ -1,0 +1,17 @@
+.about {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {color: $limeGreen; text-decoration: none;}
+    .homeLink { font-family: 'Mate SC', serif; }
+}
+
+@media (min-height: 710px) {
+    .bottom {
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+    }
+}

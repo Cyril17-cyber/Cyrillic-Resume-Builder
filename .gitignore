@@ -24,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #Large Scss files
-/scss/*.scss
+*.scss

@@ -17,25 +17,25 @@ function Input(props) {
 
     function dropDownSetter() {
         setDropDown((prevValue) => {
-            return !prevValue;
-        });
+            return !prevValue
+        })
     }
 
     function twitter() {
         props.setIcon(<TwitterIcon />);
-    };
+    }
     function linkedIn() {
         props.setIcon(<LinkedInIcon />);
     }
     function phone() {
         props.setIcon(<PhoneIcon />);
-    };
+    }
     function email() {
         props.setIcon(<EmailIcon />);
     }
     function github() {
         props.setIcon(<GitHubIcon />);
-    };
+    }
     function url() {
         props.setIcon(<UrlIcon />);
     }

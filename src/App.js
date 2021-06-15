@@ -14,9 +14,8 @@ import Resume3Texts from './components/resumesData/Resume3/Resume3Texts';
 import PrintResume3 from './components/resumesData/Resume3/PrintResume3';
 import Resume4Texts from './components/resumesData/Resume4/resume4Texts';
 import PrintResume4 from './components/resumesData/Resume4/PrintResume4';
-import MyResume from './components/MyResume';
 import Home from './components/Home';
-import {BrowserRouter as Router} from "react-router-dom"
+import {BrowserRouter as Router} from "react-router-dom";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import EmailIcon from "@material-ui/icons/EmailOutlined";
 import PhoneIcon from "@material-ui/icons/PhoneOutlined";
@@ -37,7 +36,10 @@ function App() {
     setMobileMenu((prevValue) => {
         return !prevValue;
     });
-    setProAlert(false);
+}
+
+function make() {
+  setProAlert(true);
 }
 
 //setting the go pro alert
@@ -61,17 +63,12 @@ const [ResumeData, setResumeData] = useState({
 //Resume Links
 const [icon, setIcon] = useState("");
 const [links, setLinks] = useState([
-  {icon: <EmailIcon />,
-  link: "Cyril@asogwa.com"},
-  {icon: <LinkedInIcon />,
-  link: "cyril123456"},
-  {icon: <PhoneIcon />, 
-      link: "09012345678"},
-  {icon: <GitHubIcon />,
-      link: "@cyril_19"},
-  {icon: <UrlIcon />,
-      link: "cyril.com"},
-  { icon: <TwitterIcon />,link: "@cyrilAsogwa99"}
+  {icon: <EmailIcon />, link: "Cyril@asogwa.com"},
+  {icon: <LinkedInIcon />, link: "cyril123456"},
+  {icon: <PhoneIcon />, link: "09012345678"},
+  {icon: <GitHubIcon />, link: "@cyril_19"},
+  {icon: <UrlIcon />, link: "cyril.com"},
+  { icon: <TwitterIcon />, link: "@cyrilAsogwa99"}
   ]);
 
   //Resume first list items
@@ -124,8 +121,7 @@ function linkSaving(event) {
   setLinks((prevValue) => {
       return [
           ... prevValue,
-          {icon: icon,
-              link: linkInput}
+          {icon: icon, link: linkInput}
       ]
   });
 
@@ -249,14 +245,6 @@ function deleteThirdLi(id) {
   })
 }
 
-// footer about styles
-const [about, setAbout] = useState(false);
-function makeTrue() {
-  setAbout(true)
-}
-function makeFalse() {
-  setAbout(false);
-}
   return (
     <Router>
     <div id="App" className={!mobileMenu? "" : "visibleBurger"}>
@@ -264,14 +252,13 @@ function makeFalse() {
         <Nav
          menuFunction={menuSetter}
          proAlert={callProAlert}
-         makeTrue={makeTrue}
-         makeFalse={makeFalse}
          />
          {proAlert && <ProAlert alert={callProAlert} />}
 
          <MobileLinks
           mobileMenu={mobileMenu} 
           menuFunction={menuSetter}
+          proAlert={make}
           />
 
         <Switch>
@@ -450,7 +437,7 @@ function makeFalse() {
           </Route>
         </Switch>
 
-        <Footer proAlert={callProAlert} about={about}/>
+        <Footer proAlert={callProAlert}/>
       </div>
     </div>
     </Router>

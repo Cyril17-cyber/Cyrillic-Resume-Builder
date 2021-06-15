@@ -24,9 +24,17 @@
   "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
+      "eslint:recommended",
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
   },
   "browserslist": {
     "production": [

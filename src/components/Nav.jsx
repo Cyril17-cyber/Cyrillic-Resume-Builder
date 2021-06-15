@@ -12,10 +12,10 @@ function Nav(props) {
         </Link>
 
         <div className="nav__links">
-            <Link to='/' onClick={props.makeFalse}>Home</Link>
-            <Link to='/resume' onClick={props.makeFalse}>Resumes</Link>
+            <Link to='/'>Home</Link>
+            <Link to='/resume'>Resumes</Link>
             <Link to='#' onClick={props.proAlert}>Cards</Link>
-            <Link to='/about' onClick={props.makeTrue}>About</Link>
+            <Link to='/about'>About</Link>
         </div>
 
         <button className="pro" onClick={props.proAlert}>Go Pro</button>

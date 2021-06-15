@@ -9,7 +9,7 @@ import logo from '../images/jackOfHearts.jpg';
 function Footer(props) {
     const year = new Date();
     return (
-    <div className={props.about? "footer bottom" : "footer"}>
+    <div className="footer">
         <div className="left"><Link to='/' className="logo">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Cyrillic</p>

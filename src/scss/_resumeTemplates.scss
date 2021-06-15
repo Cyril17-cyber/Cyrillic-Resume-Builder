@@ -2,7 +2,7 @@
     font-family: 'Public Sans', sans-serif;
     display: flex;
     .MuiSvgIcon-root {
-        margin-right: 2rem;
+        margin-right: 0.5rem;
     }
     h2 {
         font-weight: 500;
@@ -31,6 +31,7 @@
                 flex-direction: column;
 
                 .links {
+                    height: 7vh;
                     display: flex;
                     align-items: center;
 
@@ -38,10 +39,6 @@
                         margin: 0;
                         text-decoration: none;
                         color: black;
-                    }
-
-                    &:not(:last-child) {
-                        margin-bottom: 11px;
                     }
                 }
             }
@@ -93,6 +90,7 @@
         .links {
             display: flex;
             align-items: center;
+            height: 7vh;
             p {
                 margin-left: 10px;
             }
@@ -141,6 +139,7 @@
         .links {
             display: flex;
             align-items: center;
+            height: 7vh;
             .MuiSvgIcon-root {
                 margin: 0px 10px 0px 18px;
             }

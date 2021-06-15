@@ -144,8 +144,8 @@ nav #hamburger > span:not(:last-child) {
 .proAlert {
   z-index: 2;
   font-family: 'Nunito', sans-serif;
-  position: absolute;
-  top: 65%;
+  position: fixed;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -163,6 +163,10 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.proAlert p {
+  margin: 0;
 }
 
 #App h1 {
@@ -516,7 +520,7 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .resume1 .MuiSvgIcon-root {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
 }
 
 .resume1 h2 {
@@ -563,6 +567,7 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .resume1 .LeftSide__top .contacts .links {
+  height: 7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,10 +580,6 @@ nav #hamburger > span:not(:last-child) {
   margin: 0;
   text-decoration: none;
   color: black;
-}
-
-.resume1 .LeftSide__top .contacts .links:not(:last-child) {
-  margin-bottom: 11px;
 }
 
 .resume1 .LeftSide__bottom {
@@ -654,6 +655,7 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 7vh;
 }
 
 .resume2 .LeftSide .links p {
@@ -739,6 +741,7 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 7vh;
 }
 
 .Resumebottom .leftSide .links .MuiSvgIcon-root {
@@ -922,15 +925,21 @@ nav #hamburger > span:not(:last-child) {
 }
 
 .resumeEditor .resume .resume1 {
-  font-size: 1vw;
+  font-size: 90%;
 }
 
 .resumeEditor .resume .links p {
-  font-size: 1vw;
+  font-size: 90%;
 }
 
 .resumeEditor .resume .links .MuiSvgIcon-root {
-  height: 2vw;
+  height: 10vw;
+}
+
+@media (max-width: 993px) {
+  .editor .resumeEditor .inputDiv input {
+    width: 42vw;
+  }
 }
 
 .printResume {
@@ -947,10 +956,10 @@ nav #hamburger > span:not(:last-child) {
 }
 
 @media (max-width: 430px) {
-  .printResume .resume1 {
+  .printResume .resume1, .printResume .resume2, .printResume .resume3, .printResume .resume4 {
     font-size: 50%;
   }
-  .printResume .resume1 .MuiSvgIcon-root {
+  .printResume .resume1 .MuiSvgIcon-root, .printResume .resume2 .MuiSvgIcon-root, .printResume .resume3 .MuiSvgIcon-root, .printResume .resume4 .MuiSvgIcon-root {
     margin-right: 7px;
     width: 5vw;
   }
@@ -968,17 +977,17 @@ nav #hamburger > span:not(:last-child) {
   height: 21px;
 }
 
-@media (max-width: 430px) {
-  .printResume .resume2 {
-    font-size: 50%;
-  }
-}
-
 @media (min-height: 980px) {
   .footer {
     position: absolute;
     width: 100vw;
     bottom: 0;
+  }
+}
+
+@media (max-width: 998px) {
+  .resumeEditor {
+    display: block;
   }
 }
 
@@ -1004,11 +1013,17 @@ nav #hamburger > span:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: large;
 }
 
 .about a {
   color: #31d35c;
-  text-decoration: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.about a:hover {
+  color: #2bb7da;
 }
 
 .about .homeLink {

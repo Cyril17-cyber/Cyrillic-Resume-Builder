@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Photo1 from '../images/photo1.jpeg';
 import Photo2 from '../images/photo3.jpeg';
 import Photo3 from '../images/photo2.jpeg';
@@ -17,7 +17,6 @@ function Resumes(props) {
         {img: Photo3, to: '/resume/edit/resume3'},
         {img: Photo4, to: '/resume/edit/resume4'}
     ]
-    const [links, setLinks] = useState(images);
 
     const proImages = [
         {img: Photo5, to: '#'},
@@ -25,7 +24,6 @@ function Resumes(props) {
         {img: Photo7, to: '#'},
         {img: Photo8, to: '#'},
     ]
-    const [proLinks, setProLinks] = useState(proImages);
 
 
     return (
@@ -58,7 +56,7 @@ function Resumes(props) {
          </div>
 
          <div className="ResumeLists">
-             {links.map((link, id) => {
+             {images.map((link, id) => {
                  return (
                     <div className="links" key={id}>
                     <Link to={link.to}>
@@ -67,7 +65,7 @@ function Resumes(props) {
                     </div>
                  )
              })}
-             {proLinks.map((link, id) => {
+             {proImages.map((link, id) => {
                  return (
                     <div className="prolinks" key={id}>
                     <Link to={link.to} onClick={props.proAlert}>

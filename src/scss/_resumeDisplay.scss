@@ -104,39 +104,39 @@
     }
     .resume {
         .resume1 {
-            font-size: 1vw;
+            font-size: 90%;
         }
         .links{
             p {
-                font-size: 1vw;
+                font-size: 90%;
             }
             .MuiSvgIcon-root {
-                        height: 2vw;
+                        height: 10vw;
                     }
         }
     }
+}
+@media(max-width: 993px) {
+    .editor {.resumeEditor{.inputDiv {input{width: 42vw}}}}
 }
 
 .printResume {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .resume1 { 
-        @media(max-width: 430px) {
-        font-size: 50%;
-        .MuiSvgIcon-root {
-            margin-right: 7px;
-            width: 5vw
+    @media(max-width: 430px) {
+        .resume1, .resume2, .resume3, .resume4 {
+            font-size: 50%;
+            .MuiSvgIcon-root {
+                margin-right: 7px;
+                width: 5vw
+            }   
         }
-    } 
-}
+    }
     .resume2 {
         h1 { height: 4vh; } 
         p { height: 31px; }
         .links{ p{height: 21px; } }
-        @media(max-width: 430px) {
-            font-size: 50%;
-        }
     }
 }
 
@@ -146,6 +146,10 @@
         width: 100vw;
         bottom: 0;
     }
+}
+
+@media(max-width: 998px) {
+    .resumeEditor {display: block;}
 }
 
 @media(max-width:375px) {
